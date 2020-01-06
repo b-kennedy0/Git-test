@@ -1,2 +1,3 @@
-# Git-test
-Test git, rstudio - Repro 2020
+# My Example Repo
+
+This repo is used to demonstrate github to users of R and R Studio.
