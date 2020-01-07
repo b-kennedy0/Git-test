@@ -1,4 +1,7 @@
-mydata = read.csv("example_data.csv")
+install.packages("here")
+library(here)
+
+mydata = read.csv(here("data", "example_data.csv"))
 plot(mydata$xdata,mydata$ydata)
 
 # some guesses for the parameters.
