@@ -1,6 +1,7 @@
 install.packages("here")
 library(here)
 # here is the change 6/7/20
+# This is a change
 mydata = read.csv(here("data", "example_data.csv"))
 plot(mydata$xdata,mydata$ydata)
 
