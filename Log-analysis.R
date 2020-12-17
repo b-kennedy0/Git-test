@@ -15,3 +15,14 @@ mean_time_since <- mean(data$time_since, na.rm = TRUE)
 q <- ggplot(data, aes(date,time_since)) + geom_point() + geom_line() +
   geom_hline(yintercept=mean_time_since, linetype="dashed", color = "red")
 q
+
+data$date_only <- as.Date(data$date)
+
+freq <- data %>% 
+  group_by(date_only) %>% 
+  summarise(n=n())
+
+mean_freq <- mean(freq$n)
+a <- ggplot(freq, aes(date_only,n)) + geom_point() +geom_line() + 
+              geom_hline(yintercept = mean_freq, linetype="dashed", color="red")
+a
